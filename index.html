@@ -8,85 +8,8 @@
 </head>
 <body>
 
-    <title>Carousel solo HTML/CSS</title>
-  <style>
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: sans-serif; }
-
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-    }
-    .slides {
-      display: flex;
-      width: 400%; /* se 4 slide, altrimenti adattare */
-      transition: transform 0.5s ease-in-out;
-    }
-    .slides img {
-      width: 100%;
-      flex-shrink: 0;
-    }
-
-    /* Bottoni */
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .prev { left: 10px; }
-    .next { right: 10px; }
-
-    /* Radio buttons hidden */
-    input[name="carousel"] {
-      display: none;
-    }
-
-    /* Controllo tramite :checked */
-    #slide1:checked ~ .slides { transform: translateX(0%); }
-    #slide2:checked ~ .slides { transform: translateX(-100%); }
-    #slide3:checked ~ .slides { transform: translateX(-200%); }
-    #slide4:checked ~ .slides { transform: translateX(-300%); }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .prev, .next {
-        padding: 6px;
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<div class="carousel">
-  <!-- radio buttons -->
-  <input type="radio" name="carousel" id="slide1" checked>
-  <input type="radio" name="carousel" id="slide2">
-  <input type="radio" name="carousel" id="slide3">
-  <input type="radio" name="carousel" id="slide4">
-
-  <!-- slides -->
-  <div class="slides">
-    <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Slide+1" alt="Slide 1">
-    <img src="https://via.placeholder.com/800x400/7f7fff/333333?text=Slide+2" alt="Slide 2">
-    <img src="https://via.placeholder.com/800x400/7fff7f/333333?text=Slide+3" alt="Slide 3">
-    <img src="https://via.placeholder.com/800x400/ffff7f/333333?text=Slide+4" alt="Slide 4">
-  </div>
-
-  <!-- navigation buttons via labels -->
-  <label for="slide4" class="prev">&#10094;</label>
-  <label for="slide2" class="next">&#10095;</label>
-
-  <label for="slide1" class="prev" style="display:none;">&#10094;</label>
-  <label for="slide3" class="next" style="display:none;">&#10095;</label><!-- BARRA DI NAVIGAZIONE (MENU) -->
+    
+    <!-- BARRA DI NAVIGAZIONE (MENU) -->
     <header class="navbar">
         <div class="logo">
             <a href="index.html">Galleria ASTRA</a>
@@ -139,6 +62,24 @@
             <!-- Aggiungi altri collegamenti immagine qui... -->
         </section>
     </main>
+<div class="carousel">
+  <input type="radio" name="carousel" id="slide1" checked>
+  <input type="radio" name="carousel" id="slide2">
+  <input type="radio" name="carousel" id="slide3">
+  <input type="radio" name="carousel" id="slide4">
+
+  <div class="slides">
+    <img src="leclerc.jpg" alt="Slide 1">
+    <img src="leclerc.jpg" alt="Slide 2">
+    <img src="leclerc.jpg" alt="Slide 3">
+  </div>
+
+  <label for="slide4" class="prev">&#10094;</label>
+  <label for="slide2" class="next">&#10095;</label>
+
+  <label for="slide1" class="prev" style="display:none;">&#10094;</label>
+  <label for="slide3" class="next" style="display:none;">&#10095;</label>
+</div>
 
     <footer>
         <p>&copy; 2025 Galleria ASTRA. Tutti i diritti riservati.</p>
