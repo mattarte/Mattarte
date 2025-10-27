@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galleria d'Arte - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>SITO PROVA</h1>
+
+    <!-- BARRA DI NAVIGAZIONE (MENU) -->
+    <header class="navbar">
+        <\div class="logo">
+            <a href="index.html">Galleria ASTRA</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opere.html">Opere</a></li>
+                <li><a href="artisti.html">Artisti</a></li>
+                
+                <!-- MENU A TENDINA -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Gallerie ▼</a>
+                    <\div class="dropdown-content">
+                        <a href="galleria-moderna.html">Arte Moderna</a>
+                        <a href="galleria-classica.html">Arte Classica</a>
+                        <a href="galleria-contemporanea.html">Arte Contemporanea</a>
+                    </div>
+                </li>
+                
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENUTO PRINCIPALE (HOME PAGE) -->
+    <main class="container">
+        <h1>Benvenuto nella Galleria d'Arte</h1>
+        <p>Esplora le nostre collezioni e scopri capolavori da tutto il mondo.</p>
+
+        <\section class="image-grid">
+            <!-- Collegamento Immagine 1 -->
+            <a href="opere.html#monalisa" class="image-link">
+                <img src="placeholder-1.jpg" alt="Descrizione Opera 1">
+                <\div class="caption">La Gioconda</div>
+            </a>
+
+            <!-- Collegamento Immagine 2 -->
+            <a href="artisti.html#davinci" class="image-link">
+                <img src="placeholder-2.jpg" alt="Descrizione Opera 2">
+                <\div class="caption">Leonardo da Vinci</div>
+            </a>
+
+            <!-- Collegamento Immagine 3 -->
+            <a href="galleria-moderna.html" class="image-link">
+                <img src="placeholder-3.jpg" alt="Descrizione Opera 3">
+                <\div class="caption">Collezione Moderna</div>
+            </a>
+            
+            <!-- Aggiungi altri collegamenti immagine qui... -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Galleria ASTRA. Tutti i diritti riservati.</p>
+    </footer>
+
 </body>
 </html>
