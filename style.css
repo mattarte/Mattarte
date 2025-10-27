@@ -144,3 +144,65 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
+/* -------------------------------------------------- */
+/* STILI CAROUSEL IMMAGINI */
+/* -------------------------------------------------- */
+
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+    display: flex;
+    width: 400%; /* 4 immagini */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Pulsanti */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+.carousel-prev:hover, .carousel-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+input[name="carousel"] {
+    display: none;
+}
+
+/* Controllo slide */
+#c1:checked ~ .carousel-track { transform: translateX(0%); }
+#c2:checked ~ .carousel-track { transform: translateX(-100%); }
+#c3:checked ~ .carousel-track { transform: translateX(-200%); }
+#c4:checked ~ .carousel-track { transform: translateX(-300%); }
+
+@media (max-width: 600px) {
+    .carousel-prev, .carousel-next {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
